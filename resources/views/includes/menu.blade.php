@@ -7,26 +7,27 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{route("home")}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="{{route("about")}}">About</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
+                <a class="nav-link" href="{{route("contact")}}">Contact</a>
             </li>
 
             <! >
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Access</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="/signin">Sign In</a>
-                    <a class="dropdown-item" href="/singout">Sign Out</a>
-                    <a class="dropdown-item" href="/messages">View Messages</a>
+                    <a class="dropdown-item" href="{{route("signin")}}">Sign In</a>
+                    <a class="dropdown-item" href="{{route("signout")}}">Sign Out</a>
+                    <a class="dropdown-item" href="{{route("messages")}}">View Messages</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signup">Sign Up</a>
+                <a class="nav-link" href="{{route("register")}}">Sign Up</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
