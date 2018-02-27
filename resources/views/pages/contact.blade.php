@@ -10,7 +10,8 @@
             <div class="card-body">
 
                 <form action="/contact" method="post">
-                    {{ csrf_field() }}
+
+                    @csrf
                     <div class="form-group">
                         <label for="subject">Subject of your message:</label>
                         <textarea name="subject" class="form-control" id="subject" rows="1"></textarea>

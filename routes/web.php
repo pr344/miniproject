@@ -11,37 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-})->name('home');
+Route::get('/', 'PagesController@home')->name('home');
 
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+Route::get('/about', 'PagesController@about')->name('about');
 
-Route::get('/signin', function () {
-    return view('pages.signin');
-})->name('signin');
+Route::get('/contact','PagesController@contact')->name('contact');
 
-Route::get('/signout', function () {
-    return view('pages.signout');
-})->name('signout');
+Route::get('/signin', 'PagesController@signin')->name('signin');
 
-Route::get('/signup', function () {
-    return view('pages.signup');
-})->name('register');
+Route::get('/signout','PagesController@signout')->name('signout');
 
+Route::get('/signup','PagesController@register')->name('register');
 
-Route::get('/messages', function () {
-    return view('pages.messages');
-})->name('messages');
+Route::get('/messages', 'PagesController@messages')->name('messages');
 
-Route::post('/contact', function () {
-   $data =request()->all();
+Route::get('/thanks/{name}', 'PagesController@thanks')->name('thanks');
 
-    echo "From: ".$data['email'], '<br>';
-    echo "Message: ".$data['body'];
-})->name('read');
+Route::post('/contact', 'PagesController@store')->name('contact.store');
