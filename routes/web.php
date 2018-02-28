@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home')->name('home');
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/contact','PagesController@contact')->name('contact');
+Route::get('/signin', 'PagesController@signin')->name('signin');
+Route::get('/signout','PagesController@signout')->name('signout');
+Route::get('/signup','PagesController@register')->name('register');
+Route::get('/messages', 'PagesController@messages')->name('messages');
+Route::get('/thanks/{name}', 'PagesController@thanks')->name('thanks');
+Route::post('/contact', 'PagesController@store')->name('contact.store');
